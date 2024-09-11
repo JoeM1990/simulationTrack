@@ -28,13 +28,13 @@ Le projet contient les fichiers suivants :
 1. Clonez le projet depuis GitHub :
 
     ```bash
-    git clone https://github.com/votre-utilisateur/piste-lampes.git
+    git clone https://github.com/JoeM1990/simulationTrack.git
     ```
 
 2. Installez les dépendances :
 
     ```bash
-    cd piste-lampes
+    cd simulationTrack
     npm install
     ```
 
