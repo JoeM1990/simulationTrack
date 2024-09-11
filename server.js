@@ -6,7 +6,8 @@ let lampStates = {
   lamp2: false,
   lamp3: false,
   lamp4: false,
-  
+  lamp5: false,
+  lamp6: false,
 };
 
 wss.on('connection', ws => {
