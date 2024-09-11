@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Contrôle des Lampes</title>
 </head>
 <body>
@@ -15,15 +15,29 @@
   </header>
 
   <main>
-    <section id="lamp-controls">
-      <h2>État des Lampes</h2>
-      <div class="lamp" data-id="lamp1">Lampe 1: <button class="toggle-btn">Allumer</button></div>
-      <div class="lamp" data-id="lamp2">Lampe 2: <button class="toggle-btn">Allumer</button></div>
-      <div class="lamp" data-id="lamp3">Lampe 3: <button class="toggle-btn">Allumer</button></div>
-      <div class="lamp" data-id="lamp4">Lampe 4: <button class="toggle-btn">Allumer</button></div>
+    <section id="runway-control">
+      <h2>Piste d'Atterrissage</h2>
+      <div class="runway">
+        <div class="lamp" data-id="lamp1">
+          <div class="lamp-light"></div>
+          <button class="toggle-btn">Allumer</button>
+        </div>
+        <div class="lamp" data-id="lamp2">
+          <div class="lamp-light"></div>
+          <button class="toggle-btn">Allumer</button>
+        </div>
+        <div class="lamp" data-id="lamp3">
+          <div class="lamp-light"></div>
+          <button class="toggle-btn">Allumer</button>
+        </div>
+        <div class="lamp" data-id="lamp4">
+          <div class="lamp-light"></div>
+          <button class="toggle-btn">Allumer</button>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="scripts/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
