@@ -44,7 +44,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
   }
   
-  .lamp.on .lamp-light {
+  .lamp.on .lamp-light  {
     background-color: #00ff00; 
   }
   

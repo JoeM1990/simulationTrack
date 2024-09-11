@@ -1,10 +1,10 @@
-const socket = new WebSocket('wss://simulationtrack.onrender.com/'); 
+ const socket = new WebSocket('ws://localhost:8080');
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButtons = document.querySelectorAll('.toggle-btn');
     const lampStatuses = document.querySelectorAll('.lamp-status');
 
-    // Page de contrôle des lampes
+    // Page de contrôle des lampes (index.html)
     toggleButtons.forEach(button => {
         button.addEventListener('click', function () {
             const lamp = this.parentElement;
@@ -14,26 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const newState = !isOn;
             socket.send(JSON.stringify({ lampId, state: newState }));
 
-            // Mettre à jour localement sans attendre la réponse
+            // Mettre à jour localement sans attendre la réponse du serveur
             lamp.classList.toggle('on', newState);
             lamp.classList.toggle('off', !newState);
             this.classList.toggle('on', newState);
             this.classList.toggle('off', !newState);
             this.textContent = newState ? 'Éteindre' : 'Allumer';
+
+            // Changer la couleur de la lampe
+            const lampLight = lamp.querySelector('.lamp-light');
+            lampLight.classList.toggle('on', newState);
+            lampLight.classList.toggle('off', !newState);
         });
     });
 
-    // Page d'état visuel des lampes
+    // Page d'état des lampes (status.html)
     if (lampStatuses.length > 0) {
         socket.onmessage = function (event) {
             const data = JSON.parse(event.data);
             const lampStatusElement = document.getElementById(`${data.lampId}-status`);
 
+            console.log(data);
+
             if (lampStatusElement) {
+                const lampLight = lampStatusElement.querySelector('.lamp-light');
                 lampStatusElement.classList.toggle('on', data.state);
                 lampStatusElement.classList.toggle('off', !data.state);
-                lampStatusElement.querySelector('.lamp-light').classList.toggle('on', data.state);
-                lampStatusElement.querySelector('.lamp-light').classList.toggle('off', !data.state);
+                lampStatusElement.textContent = `Lampe ${data.lampId.replace('lamp', '')}: ${data.state ? 'Allumée' : 'Éteinte'}`;
+
+                // Mettre à jour la couleur de la lampe
+                lampLight.classList.toggle('on', data.state);
+                lampLight.classList.toggle('off', !data.state);
             }
         };
     }
