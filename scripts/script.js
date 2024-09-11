@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('off', !newState);
             this.textContent = newState ? 'Éteindre' : 'Allumer';
 
-            // Changer la couleur de la lampe
             const lampLight = lamp.querySelector('.lamp-light');
             lampLight.classList.toggle('on', newState);
             lampLight.classList.toggle('off', !newState);
