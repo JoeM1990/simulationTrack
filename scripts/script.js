@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Mettre à jour localement sans attendre la réponse
       lamp.classList.toggle('on', newState);
+      lamp.classList.toggle('off', !newState);
+      this.classList.toggle('on', newState);
+      this.classList.toggle('off', !newState);
       this.textContent = newState ? 'Éteindre' : 'Allumer';
     });
   });
