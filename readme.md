@@ -58,5 +58,17 @@ Le projet contient les fichiers suivants :
 1. Ouvrez `status.html` dans un autre onglet ou sur un autre appareil pour visualiser l'état des lampes en temps réel.
 2. Les cercles changent de couleur (jaune pour allumé, gris pour éteint) en fonction de l'état des lampes.
 
-## Structure des Fichiers
+
+## Personnalisation
+
+- Vous pouvez ajouter ou supprimer des lampes en modifiant les fichiers `index.html`, `status.html`, et en ajustant la logique du serveur dans `server.js`.
+- La couleur et le style des lampes peuvent être changés dans `styles/style.css`.
+
+## Déploiement
+
+Pour déployer ce projet sur un serveur distant, assurez-vous d'ajuster l'URL du WebSocket dans `script.js` pour pointer vers le serveur hébergé.
+
+```javascript
+const socket = new WebSocket('ws://votre-serveur:8080');
+
 
