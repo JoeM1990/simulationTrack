@@ -71,4 +71,7 @@ Pour déployer ce projet sur un serveur distant, assurez-vous d'ajuster l'URL du
 ```javascript
 const socket = new WebSocket('ws://votre-serveur:8080');
 
+## Auteur
+
+Ce projet a été créé par [Joe Monkila](https://github.com/JoeM1990).
 
