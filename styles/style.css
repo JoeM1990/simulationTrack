@@ -35,41 +35,49 @@ body {
   }
   
   .lamp-light {
-    width: 60px; 
+    width: 60px; /* Taille du cercle */
     height: 60px;
     border-radius: 50%;
     background-color: grey;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 10px; /* Espace entre le cercle et le bouton */
+    transition: background-color 0.3s ease; /* Transition fluide pour le changement d'état */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
   }
   
-  .lamp.on .lamp-light, .lamp-status.on .lamp-light {
-    background-color: #00ff00; 
+  .lamp.on .lamp-light {
+    background-color: #00ff00; /* Lampe allumée en vert */
   }
   
-  .lamp-status.off .lamp-light {
-    background-color: grey;
+  .lamp.off .lamp-light {
+    background-color: grey; /* Lampe éteinte */
   }
   
   .toggle-btn {
-    padding: 10px 20px; 
-    background-color: #4CAF50; 
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Vert par défaut pour allumer */
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toggle-btn.off {
+    background-color: #4CAF50; /* Vert pour "Allumer" */
+  }
+  
+  .toggle-btn.on {
+    background-color: #f44336; 
   }
   
   .toggle-btn:hover {
-    background-color: #45a049; 
+    opacity: 0.9;
   }
   
   .toggle-btn:active {
-    background-color: #3e8e41; 
+    opacity: 0.8;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
   }
   
