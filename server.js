@@ -11,6 +11,8 @@ let lampStates = {
     lamp6: false,
 };
 
+console.log("Le serveur WebSocket est lancé et écoute sur le port 8080");
+
 wss.on('connection', ws => {
     ws.on('message', message => {
         const data = JSON.parse(message);
