@@ -53,24 +53,24 @@ body {
   }
   
   .toggle-btn {
-    padding: 10px 20px; /* Plus d'espace pour un bouton plus large */
-    background-color: #4CAF50; /* Vert pour un bouton attractif */
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
     border: none;
     border-radius: 5px; /* Bords arrondis */
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transition douce lors du hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'ombre */
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .toggle-btn:hover {
-    background-color: #45a049; /* Couleur du bouton au survol */
+    background-color: #45a049; 
   }
   
   .toggle-btn:active {
-    background-color: #3e8e41; /* Couleur lors du clic */
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+    background-color: #3e8e41; 
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
   }
   
   h2 {
