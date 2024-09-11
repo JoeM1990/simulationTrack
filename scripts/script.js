@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const newState = !isOn;
             socket.send(JSON.stringify({ lampId, state: newState }));
 
-            // Mettre à jour localement sans attendre la réponse du serveur
             lamp.classList.toggle('on', newState);
             lamp.classList.toggle('off', !newState);
             this.classList.toggle('on', newState);
