@@ -35,7 +35,7 @@ body {
   }
   
   .lamp-light {
-    width: 60px; /* Augmenté la taille du cercle */
+    width: 60px; 
     height: 60px;
     border-radius: 50%;
     background-color: grey;
