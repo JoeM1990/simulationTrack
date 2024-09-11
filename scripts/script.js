@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 lampStatusElement.classList.toggle('off', !data.state);
                 lampStatusElement.textContent = `Lampe ${data.lampId.replace('lamp', '')}: ${data.state ? 'Allumée' : 'Éteinte'}`;
 
-                // Mettre à jour la couleur de la lampe
                 lampLight.classList.toggle('on', data.state);
                 lampLight.classList.toggle('off', !data.state);
             }
