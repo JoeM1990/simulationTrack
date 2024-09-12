@@ -1,78 +1,123 @@
+/* Corps global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('../assets/piste.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: #f7f9fc;
+    color: #333;
 }
 
+/* Style du header */
 header {
-    background-color: #333;
+    background-color: #2b3d52;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #00ffcc;
+}
+
+/* Style général du main */
 main {
     padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #2b3d52;
+    margin-bottom: 20px;
+}
+
+/* Style de la piste et des lampes */
 .runway {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 50px 0;
+    padding: 10px;
 }
 
-.lamp,
-.lamp-status {
+/* Style des lampes */
+.lamp, .lamp-status {
     position: relative;
     text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f1f3f5;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.lamp:hover, .lamp-status:hover {
+    transform: translateY(-10px);
 }
 
 .lamp-light {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: grey;
     margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.lamp.on .lamp-light {
-    background-color: #00ff00;
+/* Animation pour le clignotement */
+@keyframes blink {
+    0% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+    50% { background-color: grey; box-shadow: none; }
+    100% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
 }
 
+/* Ajout du clignotement */
+.lamp-light.blink {
+    animation: blink 1s infinite;
+}
+
+/* Lorsque la lampe est allumée */
+.lamp.on .lamp-light  {
+    background-color: #00ff00; 
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* Lorsque la lampe est éteinte */
 .lamp.off .lamp-light {
     background-color: grey;
+    box-shadow: none;
 }
 
+/* Boutons pour allumer/éteindre */
 .toggle-btn {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    padding: 12px 25px;
+    background-color: #4caf50;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
 }
 
 .toggle-btn.off {
-    background-color: #4CAF50;
+    background-color: #4caf50;
 }
 
 .toggle-btn.on {
@@ -81,6 +126,7 @@ main {
 
 .toggle-btn:hover {
     opacity: 0.9;
+    transform: translateY(-3px);
 }
 
 .toggle-btn:active {
@@ -88,14 +134,9 @@ main {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-    text-align: center;
-    /* color: white; */
-}
-
+/* Lamp status text */
 .lamp-status {
-    padding: 10px;
-    width: 100px;
+    color: #333;
 }
 
 .lamp-status.on {
@@ -106,20 +147,12 @@ h2 {
     color: red;
 }
 
-@keyframes blink {
-    0% { background-color: #00ff00; }
-    50% { background-color: grey; }
-    100% { background-color: #00ff00; }
-}
-
-.lamp-light.blink {
-    animation: blink 1s infinite;
-}
-
+/* Style pour les transitions douces */
 .lamp, .toggle-btn, .lamp-light {
     transition: all 0.3s ease;
 }
 
+/* Animation pour le hover des lampes */
 .lamp:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
