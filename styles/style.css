@@ -3,58 +3,59 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
     color: white;
     padding: 15px;
     text-align: center;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: white;
     text-decoration: none;
     padding: 0 10px;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  .runway {
+}
+
+.runway {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 50px 0;
-  }
-  
-  .lamp, .lamp-status {
+}
+
+.lamp,
+.lamp-status {
     position: relative;
     text-align: center;
-  }
-  
-  .lamp-light {
+}
+
+.lamp-light {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: grey;
-    margin-bottom: 10px; 
-    transition: background-color 0.3s ease; 
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
-  }
-  
-  .lamp.on .lamp-light  {
-    background-color: #00ff00; 
-  }
-  
-  .lamp.off .lamp-light {
-    background-color: grey; 
-  }
-  
-  .toggle-btn {
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.lamp.on .lamp-light {
+    background-color: #00ff00;
+}
+
+.lamp.off .lamp-light {
+    background-color: grey;
+}
+
+.toggle-btn {
     padding: 10px 20px;
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     border: none;
     border-radius: 5px;
     color: white;
@@ -62,39 +63,38 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .toggle-btn.off {
-    background-color: #4CAF50; 
-  }
-  
-  .toggle-btn.on {
-    background-color: #f44336; 
-  }
-  
-  .toggle-btn:hover {
+}
+
+.toggle-btn.off {
+    background-color: #4CAF50;
+}
+
+.toggle-btn.on {
+    background-color: #f44336;
+}
+
+.toggle-btn:hover {
     opacity: 0.9;
-  }
-  
-  .toggle-btn:active {
+}
+
+.toggle-btn:active {
     opacity: 0.8;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
-  }
-  
-  h2 {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
     text-align: center;
-  }
-  
-  .lamp-status {
+}
+
+.lamp-status {
     padding: 10px;
     width: 100px;
-  }
-  
-  .lamp-status.on {
+}
+
+.lamp-status.on {
     color: green;
-  }
-  
-  .lamp-status.off {
+}
+
+.lamp-status.off {
     color: red;
-  }
-  
+}
