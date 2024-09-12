@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 lampLight.classList.toggle('on', data.state);
                 lampLight.classList.toggle('off', !data.state);
+
+                if (data.state) {
+                    lampLight.classList.add('blink');
+                } else {
+                    lampLight.classList.remove('blink');
+                }
             }
         };
     }
