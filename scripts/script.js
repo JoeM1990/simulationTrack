@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const lampLight = lamp.querySelector('.lamp-light');
             lampLight.classList.toggle('on', newState);
             lampLight.classList.toggle('off', !newState);
+
+            if (newState) {
+                lampLight.classList.add('blink');
+            } else {
+                lampLight.classList.remove('blink');
+            }
         });
     });
 
