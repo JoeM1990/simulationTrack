@@ -78,7 +78,7 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation pour le clignotement */
+
 @keyframes blink {
     0% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
     50% { background-color: grey; box-shadow: none; }
