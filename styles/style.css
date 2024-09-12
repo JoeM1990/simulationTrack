@@ -54,7 +54,8 @@ h2 {
 }
 
 
-.lamp, .lamp-status {
+.lamp,
+.lamp-status {
     position: relative;
     text-align: center;
     padding: 15px;
@@ -64,7 +65,8 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.lamp:hover, .lamp-status:hover {
+.lamp:hover,
+.lamp-status:hover {
     transform: translateY(-10px);
 }
 
@@ -80,9 +82,20 @@ h2 {
 
 
 @keyframes blink {
-    0% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
-    50% { background-color: grey; box-shadow: none; }
-    100% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+    0% {
+        background-color: #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+    }
+
+    50% {
+        background-color: grey;
+        box-shadow: none;
+    }
+
+    100% {
+        background-color: #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+    }
 }
 
 
@@ -91,8 +104,8 @@ h2 {
 }
 
 
-.lamp.on .lamp-light  {
-    background-color: #00ff00; 
+.lamp.on .lamp-light {
+    background-color: #00ff00;
     box-shadow: 0 0 15px #00ff00;
 }
 
@@ -147,11 +160,13 @@ h2 {
 }
 
 
-.lamp, .toggle-btn, .lamp-light {
+.lamp,
+.toggle-btn,
+.lamp-light {
     transition: all 0.3s ease;
 }
 
-/* Animation pour le hover des lampes */
+
 .lamp:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
