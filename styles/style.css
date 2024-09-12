@@ -90,19 +90,19 @@ h2 {
     animation: blink 1s infinite;
 }
 
-/* Lorsque la lampe est allumée */
+
 .lamp.on .lamp-light  {
     background-color: #00ff00; 
     box-shadow: 0 0 15px #00ff00;
 }
 
-/* Lorsque la lampe est éteinte */
+
 .lamp.off .lamp-light {
     background-color: grey;
     box-shadow: none;
 }
 
-/* Boutons pour allumer/éteindre */
+
 .toggle-btn {
     padding: 12px 25px;
     background-color: #4caf50;
@@ -133,7 +133,7 @@ h2 {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Lamp status text */
+
 .lamp-status {
     color: #333;
 }
@@ -146,7 +146,7 @@ h2 {
     color: red;
 }
 
-/* Style pour les transitions douces */
+
 .lamp, .toggle-btn, .lamp-light {
     transition: all 0.3s ease;
 }
