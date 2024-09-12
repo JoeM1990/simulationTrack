@@ -120,7 +120,6 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Animation pour le hover des lampes */
 .lamp:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
