@@ -105,3 +105,13 @@ h2 {
 .lamp-status.off {
     color: red;
 }
+
+@keyframes blink {
+    0% { background-color: #00ff00; }
+    50% { background-color: grey; }
+    100% { background-color: #00ff00; }
+}
+
+.lamp-light.blink {
+    animation: blink 1s infinite;
+}
