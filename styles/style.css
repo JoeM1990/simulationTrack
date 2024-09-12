@@ -90,7 +90,7 @@ main {
 
 h2 {
     text-align: center;
-    color: white;
+    /* color: white; */
 }
 
 .lamp-status {
