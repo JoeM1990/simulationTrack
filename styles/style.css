@@ -3,6 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7f9fc;
+    background-image: url('../assets/piste.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #333;
 }
 
@@ -102,6 +106,7 @@ h2 {
 .lamp-light.blink {
     animation: blink 1s infinite;
 }
+
 
 
 .lamp.on .lamp-light {
