@@ -1,4 +1,8 @@
- const socket = new WebSocket('ws://localhost:8080');
+/**
+ * @author Joe Monkila
+ */
+
+const socket = new WebSocket('ws://localhost:8080');
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButtons = document.querySelectorAll('.toggle-btn');
