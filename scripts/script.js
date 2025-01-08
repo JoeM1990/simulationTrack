@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = JSON.parse(event.data);
             const lampStatusElement = document.getElementById(`${data.lampId}-status`);
 
-            console.log(data);
+            //console.log(data);
 
             if (lampStatusElement) {
                 const lampLight = lampStatusElement.querySelector('.lamp-light');
